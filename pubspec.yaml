@@ -27,7 +27,8 @@ dependencies:
   pdf: 1.5.0
   path_provider: ^1.6.10
   flutter_full_pdf_viewer: ^1.0.6
-  http: ^0.12.0+1
+  http: 0.12.1
+  provider:
   firebase_auth: ^0.14.0+5
   cloud_firestore: ^0.12.9+4
 dev_dependencies:
