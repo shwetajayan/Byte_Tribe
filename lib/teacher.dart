@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' as http;
-import 'package:http/http.dart';
+import 'package:http/http.dart' as http;
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 import 'package:firebase_ml_vision/firebase_ml_vision.dart';
@@ -13,6 +13,14 @@ import 'contents.dart';
 class TeachersScreen extends StatefulWidget {
   @override
   _TeachersScreenState createState() => _TeachersScreenState();
+}
+Future<UserModel> createUser(String name,int Qid,String answer) async{
+final String apiUrl = "http://127.0.0.1:5000/";
+final response = await http.post(apiUrl,body:{
+  "name": name,
+  "Question-id": Qid,
+  "answer": answer,
+},);
 }
 
 class _TeachersScreenState extends State<TeachersScreen> {
